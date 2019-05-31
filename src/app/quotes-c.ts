@@ -6,3 +6,4 @@ export class QuotesC {
         this.Quotes= Quotes;
         this.author=author;
     }
+}

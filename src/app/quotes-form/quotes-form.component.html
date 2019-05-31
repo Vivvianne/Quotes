@@ -1,42 +1,26 @@
-<div class="container-fluid">
-  <div class="row">
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-
-      <!-- Quote Input -->
+<h1>Quotes Generator</h1>
+<form>
+  <div class="container">
+    <div class="row">
       <div class="form-group">
-        <label for="author">Quote</label>
-        <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote"
-          #quote="ngModel" required></textarea>
-        <div [hidden]="quote.valid || description.pristine" class="alert alert-danger">
-          <p> Quote is Required</p>
-
-        </div>
-
+        <label for="quote">Quote</label>
+        <textarea class=form-group name="quote" id="quote" rows="10" required></textarea>
       </div>
-      <!-- Author Form -->
       <div class="form-group">
         <label for="name">Author</label>
-        <input type="text" class="form-control" id="name" [(ngModel)]="newAuthor.name" name="author" #quoteForm="ngModel"
-          required>
+        <input type="text" class="forms" id="name" name="author" required>
 
-        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-          <p> Author is Required</p>
-
-        </div>
       </div>
-
-      <!-- Date Input -->
       <div class="form-group">
         <label for="complete">Completion</label>
-        <input type='date' id="complete" [(ngModel)]="newGoal.completeDate" name="completeDate" #completeDate="ngModel"
-          required>
-        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-          <p> Complete Date is Required</p>
+        <input type='date' id="complete" name="completeDate" required>
 
-        </div>
+        <p> Complete Date is Required</p>
+
       </div>
-      <button type="Submit" class="btn btn-success btn-lg">Like</button>
-      <button type="Submit" class="btn btn-success btn-lg">Booo!</button>
-    </form>
+    </div>
   </div>
-</div>
+
+  <button type="Submit" class="btn btn-success btn-lg">like</button>
+  <button type="Submit" class="btn btn-success btn-lg">Boo!</button>
+</form>
