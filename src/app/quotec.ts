@@ -4,4 +4,6 @@ export class Quotec {
         {this.id= id, this.authorname =authorname,this.Quote=Quote, this.submitter =submitter, this.time=time, this.upvote=upvote, this.downvote=downvote}
 
     }
+
+
 }
