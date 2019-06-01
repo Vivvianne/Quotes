@@ -11,20 +11,31 @@ import { DatePipe } from '@angular/common';
 export class QuotesFormComponent implements OnInit {
   constructor() { }
   Quotes = [];
+  Quote: string;
+  submitter: string;
+  author: string;
+
 
   names ="Mike Shago";
   
   ngOnInit() {
 
     this.Quotes=[
-      //new Quotec( 1, "TOM CRUSE", "viv" ,"2018-3-3",0, 0),
-    //  new Quotec( 2, "Memia Walgwe", "John", "2018-5-12",0 ,0),
-    //  new Quotec( 3, "Michael Angelo", "Mike", "2018-5-12",0 ,0),
-    //  new Quotec( 4, "Ndemi Wahutu", "Kimani", "2018-5-12",0 ,0),
-     // new Quotec( 5, "Tryphosa ", "Lolo", "2018-5-12",0 ,0),
-     {id:1, author:"aBC ", submitter:"XYZ", date:"2017-10-10",},
-     {id:2, author:"aBC123 ", submitter:"XYZ112", date:"2017-10-10",}
+      new Quotec( 1, "TOM CRUSE", "Quote", "viv" ,"2018-3-3",0, 0),
+      new Quotec( 2, "Memia Walgwe", "Quote", "John", "2018-5-12",0 ,0),
+      new Quotec( 3, "Michael Angelo", "Quote", "Mike", "2018-5-12",0 ,0),
+      new Quotec( 4, "Ndemi Wahutu", "Quote", "Kimani", "2018-5-12",0 ,0),
+      new Quotec( 5, "Tryphosa ", "Quote", "Lolo", "2018-5-12",0 ,0),
+  
     ]
+  }
+  submitQuote(){
+   var date = new Date();
+    this.Quotes.push(new Quotec(7,this.author,this.Quote,this.submitter, date, 0, 0 ));
+    console.log("works");
+    console.log(new Quotec(7,this.author,this.Quote,this.submitter, date, 0, 0 ))
+
+    //code here
   }
 
 }

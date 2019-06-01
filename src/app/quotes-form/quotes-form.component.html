@@ -38,14 +38,39 @@
               </div>
               <div class="col-9">
                 <input type="text" placeholder="submitter" name="submitter" [(ngModel)]="submitter">
-                
-              
+            
     
               </div>
             </div> 
+            <div class="row">
+              <div class="col-12">
+                <button class="btn btn-primary" (click)="submitQuote()" >Submit</button>
+              </div>
+            </div>
       </form>
     </div>
 
   </div>
 </div>
+</div>
+<div class="container">
+  <div *ngFor="let Q of Quotes" class="row">
+    <div class="col-4">
+      {{Q.Quote}}
+
+    </div>
+    <div class="col-3">
+      {{Q.authorname}}
+    </div>
+    <div class="col-3">
+      {{Q.submitter}}
+    </div>
+    <div class="col-1">
+      {{Q.upvote}}
+    </div>
+    <div class="col-1">
+      {{Q.downvote}}
+    </div>
+
+  </div>
 </div>
