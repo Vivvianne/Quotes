@@ -24,10 +24,15 @@ export class QuotesFormComponent implements OnInit {
   submitQuote(){
    var date = new Date();
     this.qouteservice.qoutes.push(new Quotec(7,this.author,this.Quote,this.submitter, date, 0, 0 ));
-    console.log("works");
-    console.log(new Quotec(7,this.author,this.Quote,this.submitter, date, 0, 0 ))
-
     //code here
+  }
+  quotesupvote(id:number){
+   for( var i = 0; i < this.qouteservice.qoutes.length; i++){
+     if( this.qouteservice.qoutes[i].id = id){
+      this.qouteservice.qoutes[i].upvote + 1;
+     }
+   }
+   this.Quotes = this.qouteservice.qoutes;
   }
 
 }

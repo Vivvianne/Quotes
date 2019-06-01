@@ -67,9 +67,11 @@
     </div>
     <div class="col-1">
       {{Q.upvote}}
+      <button (click)="quotesupvote(Q.id)" >{{Q.upvote}}</button>
     </div>
     <div class="col-1">
       {{Q.downvote}}
+      <button (click)="quotesdownvote(Q.id)" >Downvote</button>
     </div>
 
   </div>
