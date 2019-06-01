@@ -1,3 +1,51 @@
-<p>
-  quotes-form works!
-</p>
+<div class="container">
+<div class="row">
+  <div class="col-12">
+    <h2>Quote Generator</h2>
+    <div class="container">
+      <form action="">
+        <div class="row">
+          <div class="col-3">
+            <label for="Quote">Quote</label>
+    
+
+          </div>
+          <div class="col-9">
+            <input type="text" placeholder="Quote" name="Quote" [(ngModel)]="Quote">
+            {{Quote}}
+          
+
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+              <label for="author">Author</label>
+      
+  
+            </div>
+            <div class="col-9">
+              <input type="text" placeholder="author" name="author" [(ngModel)]="author">
+             
+            
+  
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-3">
+                <label for="submitter">Submitter</label>
+        
+    
+              </div>
+              <div class="col-9">
+                <input type="text" placeholder="submitter" name="submitter" [(ngModel)]="submitter">
+                
+              
+    
+              </div>
+            </div> 
+      </form>
+    </div>
+
+  </div>
+</div>
+</div>
