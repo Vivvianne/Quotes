@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
-import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
+import { FormDetailsComponent } from './form-details/form-details.component';
+
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { QuotesDetailsComponent } from './quotes-details/quotes-details.componen
     AppComponent,
     QuotesComponent,
     QuotesFormComponent,
-    QuotesDetailsComponent
+    FormDetailsComponent,
   ],
   imports: [
     BrowserModule
