@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { FormDetailsComponent } from './form-details/form-details.component';
-
+import { AppRoutingModule } from  './app-routing.module';
 
 
 @NgModule({
@@ -19,8 +19,9 @@ import { FormDetailsComponent } from './form-details/form-details.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

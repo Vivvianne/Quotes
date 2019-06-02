@@ -1,0 +1,12 @@
+form{
+    border:1px solid #ececec;
+    padding: 10px
+}
+.qoutes{
+    margin: 15px;
+    border:1px solid #ececec;
+}
+.theQoute:hover{
+    border-radius: 5px;
+    background-color: blueviolet;
+}

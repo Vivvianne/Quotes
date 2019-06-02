@@ -1,78 +1,91 @@
 <div class="container">
-<div class="row">
-  <div class="col-12">
-    <h2>Quote Generator</h2>
-    <div class="container">
-      <form action="">
-        <div class="row">
-          <div class="col-3">
-            <label for="Quote">Quote</label>
-    
-
-          </div>
-          <div class="col-9">
-            <input type="text" placeholder="Quote" name="Quote" [(ngModel)]="Quote">
-            {{Quote}}
-          
-
-          </div>
-        </div>
-        <div class="row">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">Quote Generator</h2>
+      <div class="container">
+        <form action="">
+          <div class="row form-group">
             <div class="col-3">
-              <label for="author">Author</label>
-      
-  
+              <label for="Quote">Quote:</label>
             </div>
             <div class="col-9">
-              <input type="text" placeholder="author" name="author" [(ngModel)]="author">
-             
-            
-  
+              <span style="color: red" *ngIf="validate">Please fill out all the fields</span>
+              <textarea class="form-control" type="text" placeholder="Quote" name="Quote" [(ngModel)]="Quote"
+                required></textarea>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-3">
+              <label for="author">Author</label>
+            </div>
+            <div class="col-9">
+              <input class="form-control" type="text" placeholder="author" name="author" [(ngModel)]="author" required>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-3">
+              <label for="submitter">Submitter</label>
+            </div>
+            <div class="col-9">
+              <input class="form-control" type="text" placeholder="submitter" name="submitter" [(ngModel)]="submitter"
+                required>
             </div>
           </div>
           <div class="row">
-              <div class="col-3">
-                <label for="submitter">Submitter</label>
-        
-    
-              </div>
-              <div class="col-9">
-                <input type="text" placeholder="submitter" name="submitter" [(ngModel)]="submitter">
-            
-    
-              </div>
-            </div> 
-            <div class="row">
-              <div class="col-12">
-                <button class="btn btn-primary" (click)="submitQuote()" >Submit</button>
-              </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary" (click)="submitQuote()">Submit</button>
             </div>
-      </form>
+          </div>
+        </form>
+      </div>
+      <div class="container qoutes">
+        <div class="row">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Qoute</th>
+                <th>Author</th>
+                <th>Submitter</th>
+                <th>Date</th>
+                <th>Actions </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let Q of Quotes">
+                <td>{{Q.Quote}}</td>
+                <td>{{Q.authorname}}</td>
+                <td>{{Q.submitter}}</td>
+                <td>{{Q.time}}</td>
+                <td><a class="btn btn-primary" (click)="viewQoute(Q)">View</a> </td>
+                <td><button class="btn btn-primary" (click)="deleteQuote(Q)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-
   </div>
 </div>
-</div>
 <div class="container">
-  <div *ngFor="let Q of Quotes" class="row">
-    <div class="col-4">
-      {{Q.Quote}}
-
+    SELECTED QOUTE
+  <div class="row">
+    <div class="col-12">
+     Quote: {{qoute.Quote}}
     </div>
-    <div class="col-3">
-      {{Q.authorname}}
+    <div class="col-12">
+     Author: {{qoute.authorname}}
     </div>
-    <div class="col-3">
-      {{Q.submitter}}
+    <div class="col-12">
+     Submitter {{qoute.submitter}}
     </div>
-    <div class="col-1">
-      {{Q.upvote}}
-      <button (click)="quotesupvote(Q.id)" >{{Q.upvote}}</button>
+    <div class="col-12">
+     Time: {{qoute.time}}
     </div>
-    <div class="col-1">
-      {{Q.downvote}}
-      <button (click)="quotesdownvote(Q.id)" >Downvote</button>
+    <div class="col-12">
+     Upvote: <button class="btn  btn-primary" (click)="upvote(qoute.upvote)"> {{qoute.upvote}}</button>
     </div>
-
+    <div class="col-12">
+     Downvote: <button class="btn  btn-primary" (click)="downvote(qoute.downvote)">{{qoute.downvote}}</button> 
+    </div>
   </div>
 </div>

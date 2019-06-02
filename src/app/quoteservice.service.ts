@@ -8,6 +8,16 @@ export class QuoteserviceService {
 
   constructor() { }
 
-  qoutes =[]
+  qoutes =[];
+  qoute = {};
 
+  public deleteQoute(qoute) {
+    const index: number = this.qoutes.indexOf(qoute);
+    if (index !== -1) {
+      this.qoutes.splice(index, 1);
+    }
+  }
+  public viewQoute(qoute){
+    this.qoute = qoute;
+  }
 }

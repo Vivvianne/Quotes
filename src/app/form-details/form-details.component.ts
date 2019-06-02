@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteserviceService } from '../quoteservice.service';
 
 @Component({
   selector: 'app-form-details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor( private qouteservice:QuoteserviceService) { }
+
+  qoute={};
 
   ngOnInit() {
+
+  this.qoute = this.qouteservice.qoute;
+
   }
 
 }
