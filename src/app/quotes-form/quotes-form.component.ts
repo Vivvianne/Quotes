@@ -9,7 +9,7 @@ import { DateCountPipe } from '../date-count.pipe';
   styleUrls: ['./quotes-form.component.css']
 })
 export class QuotesFormComponent implements OnInit {
-  constructor(private qouteservice: QuoteserviceService,private router:Router private datepipe:DateCountPipe) { }
+  constructor(private qouteservice: QuoteserviceService,private router:Router,private datepipe:DateCountPipe) { }
   validate: boolean = false;
   Quotes = [];
   Quote: string;
@@ -28,7 +28,7 @@ export class QuotesFormComponent implements OnInit {
   submitQuote() {
     if (this.author != null && this.Quote != null && this.submitter != null) {
       var date = new Date();
-      this.qouteservice.qoutes.push(new Quotec(7, this.author, this.Quote, this.submitter,this.datepipe.transform()));
+      this.qouteservice.qoutes.push(new Quotec(7, this.author, this.Quote, this.submitter, this.datepipe.transform(date), 0, false));
       this.author = this.Quote = this.submitter = null;
     } else {
       this.validate = true;

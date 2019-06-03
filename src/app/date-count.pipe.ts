@@ -12,5 +12,4 @@ export class DateCountPipe implements PipeTransform {
     return new DatePipe('en-US').transform(date, format);
     
   }
-
-
+}
