@@ -17,7 +17,7 @@ export class QuotesFormComponent implements OnInit {
   qoute:any={};
 
 
-  names = "Mike Shago";
+
 
   ngOnInit() {
 
@@ -44,11 +44,11 @@ export class QuotesFormComponent implements OnInit {
     this.qoute = quote;   
   }
 
-upvote(num){
-    this.qoute.upvote = +num;
+upvote(){
+    this.qoute.upvote++;
 }
-downvote(num){
-  this.qoute.downvote = +num;
+downvote(){
+  this.qoute.downvote++;
 }
 
 
