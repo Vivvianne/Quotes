@@ -36,7 +36,7 @@ One can contact me on ndiahav@gmail.com if there are any questions.
 
 # Licence
 
-This app is licenced by MIT.
+This app is licenced by MIT. Here is the link to the licence https://github.com/Vivvianne/Quotes/blob/master/LICENSE.
 
 ## Development server
 

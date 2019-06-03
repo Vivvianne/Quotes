@@ -3,6 +3,7 @@ import { Quotec } from '../quotec'
 import { QuoteserviceService } from '../quoteservice.service'
 import { Router } from '@angular/router';
 import { DateCountPipe } from '../date-count.pipe';
+
 @Component({
   selector: 'app-quotes-form',
   templateUrl: './quotes-form.component.html',
