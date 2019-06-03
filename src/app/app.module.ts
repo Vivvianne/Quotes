@@ -9,6 +9,7 @@ import { FormDetailsComponent } from './form-details/form-details.component';
 import { AppRoutingModule } from  './app-routing.module';
 import { DateCountPipe } from './date-count.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { QuoteserviceService } from './quoteservice.service';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { HighlightDirective } from './highlight.directive';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DateCountPipe,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
