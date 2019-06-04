@@ -28,7 +28,7 @@ Javascript
 Html and CSS
 
 # Live link
-One can view the live link here
+One can view the live link here https://vivvianne.github.io/Quotes/
 
 # Contact
 
